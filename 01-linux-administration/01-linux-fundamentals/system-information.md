@@ -1,10 +1,10 @@
-Linux Fundamentals – System Information
+# Linux Fundamentals – System Information
 
-1. Objective
+## 1. Objective
 
 The objective of this exercise is to understand the basic Linux environment and learn how to retrieve important system information using terminal commands.
 
-2. Understanding Linux
+## 2. Understanding Linux
 
 Linux is an open-source operating system kernel used in servers, desktops, cloud infrastructure and embedded systems.
 
@@ -18,13 +18,15 @@ Examples:
 - Red Hat Enterprise Linux
 - Rocky Linux
 
-3. Basic System Investigation
+## 3. Basic System Investigation
 
-3.1 Current User
+### 3.1 Current User
 
 Command:
 
+```bash
 whoami
+```
 
 Purpose:
 
@@ -32,13 +34,17 @@ Displays the username of the currently logged-in user.
 
 My result:
 
+```text
 root
+```
 
-3.2 Current Directory
+### 3.2 Current Directory
 
 Command:
 
+```bash
 pwd
+```
 
 Purpose:
 
@@ -46,13 +52,17 @@ Displays the absolute path of the current working directory.
 
 My result:
 
+```text
 /root/cloud-devops-engineering/01-linux-administration/01-linux-fundamentals
+```
 
-3.3 Linux Distribution
+### 3.3 Linux Distribution
 
 Command:
 
+```bash
 cat /etc/os-release
+```
 
 Purpose:
 
@@ -60,6 +70,7 @@ Displays information about the installed Linux distribution, including its name 
 
 My result:
 
+```text
 PRETTY_NAME="Ubuntu 26.04 LTS"
 NAME="Ubuntu"
 VERSION_ID="26.04"
@@ -73,12 +84,15 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=resolute
 LOGO=ubuntu-logo
+```
 
-3.4 Kernel Information
+### 3.4 Kernel Information
 
 Command:
 
+```bash
 uname -a
+```
 
 Purpose:
 
@@ -86,13 +100,17 @@ Displays kernel information, including the kernel version and machine architectu
 
 My result:
 
-[Linux vps3652394.trouble-free.net 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux]
+```text
+Linux vps3652394.trouble-free.net 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux
+```
 
-3.5 Hostname
+### 3.5 Hostname
 
 Command:
 
+```bash
 hostname
+```
 
 Purpose:
 
@@ -100,13 +118,17 @@ Displays the system's hostname.
 
 My result:
 
-[vps3652394.trouble-free.net]
+```text
+vps3652394.trouble-free.net
+```
 
-3.6 System Uptime
+### 3.6 System Uptime
 
 Command:
 
+```bash
 uptime
+```
 
 Purpose:
 
@@ -114,31 +136,39 @@ Shows how long the system has been running, the number of logged-in users and sy
 
 My result:
 
-[10:50:21 up 4 days,  3:07,  1 user,  load average: 0.24, 0.30, 0.29]
+```text
+10:50:21 up 4 days,  3:07,  1 user,  load average: 0.24, 0.30, 0.29
+```
 
-3.7 Memory Usage
+### 3.7 Memory Usage
 
 Command:
 
+```bash
 free -h
+```
 
 Purpose:
 
 Displays total, used and available memory and swap space.
 
-The "-h" option displays values in human-readable units.
+The `-h` option displays values in human-readable units.
 
 My result:
 
-[total        used        free      shared  buff/cache   available
+```text
+               total        used        free      shared  buff/cache   available
 Mem:           3.3Gi       1.4Gi       517Mi        38Mi       1.7Gi       1.9Gi
-Swap:          1.0Gi       461Mi       562Mi]
+Swap:          1.0Gi       461Mi       562Mi
+```
 
-3.8 Disk Usage
+### 3.8 Disk Usage
 
 Command:
 
+```bash
 df -h
+```
 
 Purpose:
 
@@ -146,7 +176,8 @@ Displays filesystem disk space usage, including total, used and available space.
 
 My result:
 
-[Filesystem      Size  Used Avail Use% Mounted on
+```text
+Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           680M  1.4M  679M   1% /run
 /dev/sda4        77G   27G   47G  37% /
 tmpfs           1.7G     0  1.7G   0% /dev/shm
@@ -163,11 +194,10 @@ overlay          77G   27G   47G  37% /var/lib/docker/rootfs/overlayfs/24eca0db9
 overlay          77G   27G   47G  37% /var/lib/docker/rootfs/overlayfs/8bc9c7ad432c66c2bf8138734554c2bbaa2c80d3c6c44bdb66d57b7e1f31ef9b
 overlay          77G   27G   47G  37% /var/lib/docker/rootfs/overlayfs/54543622d1eba365c6e119188d61ed6ca74d258afab5942857bfb3f5e048aa21
 overlay          77G   27G   47G  37% /var/lib/docker/rootfs/overlayfs/1cf83ad8bca81d4e7150ae67d8326f6e6c68206823ac3228c1183fa2b68a936a
-tmpfs           340M  8.0K  340M   1% /run/user/0]
+tmpfs           340M  8.0K  340M   1% /run/user/0
+```
 
-4. What I Learned
-
-Complete this section after performing the exercises.
+## 4. What I Learned
 
 - I learned how to identify the Linux distribution.
 - I learned how to inspect kernel information.
@@ -175,7 +205,7 @@ Complete this section after performing the exercises.
 - I learned how to check memory and disk usage.
 - I learned how to inspect system uptime.
 
-5. Practical Importance in Cloud Engineering
+## 5. Practical Importance in Cloud Engineering
 
 System information commands are important when:
 
@@ -185,6 +215,6 @@ System information commands are important when:
 - Identifying operating system versions.
 - Monitoring server health.
 
-6. Conclusion
+## 6. Conclusion
 
 This exercise introduced basic Linux system investigation commands. These commands form the foundation for Linux server administration and cloud infrastructure management.
